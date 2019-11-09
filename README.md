@@ -2,67 +2,49 @@
 ### Matvey Plevako BS18-02
 #### Solurce code [GitHub](https://github.com/matveyplevako/DE-computational-assignment).
 
-The initial conditions: $y' = \frac{y^2 - y}{x}$,  $y(1) = \frac{1}{2}$,  $x \in (1, 9)$.
+The initial conditions: ![equation](https://latex.codecogs.com/svg.latex?y%27%20%3D%20%5Cfrac%7By%5E2%20-%20y%7D%7Bx%7D), ![equation](https://latex.codecogs.com/svg.latex?y%281%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D),  ![equation](https://latex.codecogs.com/svg.latex?x%20%5Cin%20%281%2C%209%29).
 
-**Condition for x**: $x \neq 0$
+**Condition for x**: ![equation](https://latex.codecogs.com/svg.latex?x%20%5Cneq%200)
 
 ## Exact Solution
 
 Rewrite the initial equation in the form of first-order nonlinear ordinary differential equation
 
-<img src="https://latex.codecogs.com/svg.latex?y' + \frac{1}{x} y = \frac{1}{x} y^2" />
+![equation](https://latex.codecogs.com/svg.latex?y%27%20&plus;%20%5Cfrac%7B1%7D%7Bx%7D%20y%20%3D%20%5Cfrac%7B1%7D%7Bx%7D%20y%5E2)
 
-\
-Using substitution <img src="https://latex.codecogs.com/svg.latex?z = \frac{1}{y}" />
+Using substitution ![equation](https://latex.codecogs.com/svg.latex?z%20%3D%20%5Cfrac%7B1%7D%7By%7D)
 
+![equation](https://latex.codecogs.com/svg.latex?y%20%3D%20%5Cfrac%7B1%7D%7Bz%7D%20%5Chspace%7B2em%7D%20y%27%20%3D%20-%5Cfrac%7Bz%27%7D%7Bz%5E2%7D)
 
-<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{z} \hspace{2em} y' = -\frac{z'}{z^2}" />
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bz%27%7D%7Bz%5E2%7D%20&plus;%20%5Cfrac%7B1%7D%7Bxz%7D%20%3D%20%5Cfrac%7B1%7D%7Bxz%5E2%7D)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?\frac{z'}{z^2} + \frac{1}{xz} = \frac{1}{xz^2}" />
+Multiplying this by ![equation](https://latex.codecogs.com/svg.latex?z%5E2) yields
 
+![equation](https://latex.codecogs.com/svg.latex?-z%27%20&plus;%20%5Cfrac%7B1%7D%7Bx%7Dz%20%3D%20%5Cfrac%7B1%7D%7Bx%7D)
 
-Multiplying this by <img src="https://latex.codecogs.com/svg.latex?z^2" /> yields
-
-
-<img src="https://latex.codecogs.com/svg.latex?-z' + \frac{1}{x}z = \frac{1}{x}" />
-
-\
 Complementary equation:
+![equation](https://latex.codecogs.com/svg.latex?-z%27%20&plus;%20%5Cfrac%7B1%7D%7Bx%7Dz%20%3D%200)
 
-<img src="https://latex.codecogs.com/svg.latex?-z' + \frac{1}{x}z = 0" />
+![equation](https://latex.codecogs.com/svg.latex?%5Cint%5Cfrac%7Bdz%7D%7Bz%7D%20%3D%20%5Cint%20%5Cfrac%7Bdx%7D%7Bx%7D)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?\int\frac{dz}{z} = \int \frac{dx}{x}" />
+![equation](https://latex.codecogs.com/svg.latex?z%20%3D%20x%20%5Ccdot%20C)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?z = x \cdot C" />
+![equation](https://latex.codecogs.com/svg.latex?-C%20-x%20%5Ccdot%20C%27%20&plus;%20C%20%3D%20%5Cfrac%7B1%7D%7Bx%7D)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?-C -x \cdot C' + C = \frac{1}{x}" />
+![equation](https://latex.codecogs.com/svg.latex?C%27%20%3D%20-%5Cfrac%7B1%7D%7Bx%5E2%7D)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?C' = -\frac{1}{x^2}" />
+![equation](https://latex.codecogs.com/svg.latex?C%20%3D%20%5Cfrac%7B1%7D%7Bx%7D%20&plus;%20C_1)
 
+![equation](https://latex.codecogs.com/svg.latex?z%20%3D%20x%28%5Cfrac%7B1%7D%7Bx%7D%20&plus;%20C_1%29%20%5CRightarrow%20z%20%3D%201%20&plus;%20x%20%5Ccdot%20C_1)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?C = \frac{1}{x} + C_1" />
+**Exact solution** 
+![equation](https://latex.codecogs.com/svg.latex?y%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20x%20%5Ccdot%20C%7D)
 
-\
-<img src="https://latex.codecogs.com/svg.latex?z = x(\frac{1}{x} + C_1)  \Rightarrow z = 1 + x \cdot C_1" />
-
-\
-**Exact solution**
-<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{1 + x \cdot C}" /> 
-
-
-\
 Initial value problem:
-<img src="https://latex.codecogs.com/svg.latex?\frac{1}{2} = \frac{1}{1 + C} \Rightarrow C = 1" /> 
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7B2%7D%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20C%7D%20%5CRightarrow%20C%20%3D%201)
 
-\
 **Solution for the initial value problem**
-<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{1 + x}" /> 
+![equation](https://latex.codecogs.com/svg.latex?y%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20x%7D)
 
 
 
@@ -165,7 +147,9 @@ The lowest error:
 
 
 ## Global error analysis
-For <img src="https://latex.codecogs.com/svg.latex?N \in [2, 5]" /> errors decrease approximately quadratically
-For <img src="https://latex.codecogs.com/svg.latex?N > 5" /> changes in errors are less noticeable
+For ![equation](https://latex.codecogs.com/svg.latex?N%20%5Cin%20%5B2%2C%205%5D) errors decrease approximately quadratically
+For ![equation](https://latex.codecogs.com/svg.latex?N%20%3E%205) changes in errors are less noticeable
+
+
 
 
