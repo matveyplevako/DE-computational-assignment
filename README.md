@@ -10,40 +10,61 @@ The initial conditions: $y' = \frac{y^2 - y}{x}$,  $y(1) = \frac{1}{2}$,  $x \in
 
 Rewrite the initial equation in the form of first-order nonlinear ordinary differential equation
 
-$y' + \frac{1}{x} y = \frac{1}{x} y^2$
+<img src="https://latex.codecogs.com/svg.latex?y' + \frac{1}{x} y = \frac{1}{x} y^2" />
 
-Using substitution $z = \frac{1}{y}$
+\
+Using substitution <img src="https://latex.codecogs.com/svg.latex?z = \frac{1}{y}" />
 
-$y = \frac{1}{z} \hspace{2em} y' = -\frac{z'}{z^2}$ 
 
-$\frac{z'}{z^2} + \frac{1}{xz} = \frac{1}{xz^2}$
+<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{z} \hspace{2em} y' = -\frac{z'}{z^2}" />
 
-Multiplying this by $z^2$ yields
+\
+<img src="https://latex.codecogs.com/svg.latex?\frac{z'}{z^2} + \frac{1}{xz} = \frac{1}{xz^2}" />
 
-$-z' + \frac{1}{x}z = \frac{1}{x}$
 
+Multiplying this by <img src="https://latex.codecogs.com/svg.latex?z^2" /> yields
+
+
+<img src="https://latex.codecogs.com/svg.latex?-z' + \frac{1}{x}z = \frac{1}{x}" />
+
+\
 Complementary equation:
 
-$-z' + \frac{1}{x}z = 0$
+<img src="https://latex.codecogs.com/svg.latex?-z' + \frac{1}{x}z = 0" />
 
-$\int\frac{dz}{z} = \int \frac{dx}{x}$
+\
+<img src="https://latex.codecogs.com/svg.latex?\int\frac{dz}{z} = \int \frac{dx}{x}" />
 
-$z = x \cdot C$
+\
+<img src="https://latex.codecogs.com/svg.latex?z = x \cdot C" />
 
-$-C -xC' + C = \frac{1}{x}$
+\
+<img src="https://latex.codecogs.com/svg.latex?-C -x \cdot C' + C = \frac{1}{x}" />
 
-$C' = -\frac{1}{x^2}$
+\
+<img src="https://latex.codecogs.com/svg.latex?C' = -\frac{1}{x^2}" />
 
-$C = \frac{1}{x} + C_1$
 
-$z = x(\frac{1}{x} + C_1)  \Rightarrow z = 1 + xC_1$
+\
+<img src="https://latex.codecogs.com/svg.latex?C = \frac{1}{x} + C_1" />
 
-$y = \frac{1}{1 + xC}$ (**exact solution**)
+\
+<img src="https://latex.codecogs.com/svg.latex?z = x(\frac{1}{x} + C_1)  \Rightarrow z = 1 + x \cdot C_1" />
 
-Solution for the initial value problem:
-$\frac{1}{2} = \frac{1}{1 + C} \Rightarrow C = 1$
+\
+**Exact solution**
+<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{1 + x \cdot C}" /> 
 
-$y = \frac{1}{1 + x}$ (**Solution for the initial value problem**)
+
+\
+Initial value problem:
+<img src="https://latex.codecogs.com/svg.latex?\frac{1}{2} = \frac{1}{1 + C} \Rightarrow C = 1" /> 
+
+\
+**Solution for the initial value problem**
+<img src="https://latex.codecogs.com/svg.latex?y = \frac{1}{1 + x}" /> 
+
+
 
 
 ## Software Apllication
@@ -144,8 +165,7 @@ The lowest error:
 
 
 ## Global error analysis
-For $N \in [2, 5]$ errors decrease quadratically
-With $N > 5$ the changes in errors are less noticeable
-
+For <img src="https://latex.codecogs.com/svg.latex?N \in [2, 5]" /> errors decrease approximately quadratically
+For <img src="https://latex.codecogs.com/svg.latex?N > 5" /> changes in errors are less noticeable
 
 
